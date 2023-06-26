@@ -1,0 +1,13 @@
+@import './../../paint/paint';
+
+.body {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: $Very-pale-orange;
+}
+
+@media screen  and (max-width: 600px){
+    // .body {
+    //     aspect-ratio: 4/5;
+    // }
+}

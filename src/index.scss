@@ -1,0 +1,35 @@
+@import './assets/paint/paint';
+
+@font-face {
+    font-family: ex-bold;
+    src: url(./assets/font/Kanit-ExtraBold.ttf);
+}
+@font-face {
+    font-family: bod;
+    src: url(./assets/font/Kanit-Bold.ttf);
+}
+@font-face {
+    font-family: med;
+    src: url(./assets/font/Kanit-Medium.ttf);
+}
+@font-face {
+    font-family: reg;
+    src: url(./assets/font/Kanit-Regular.ttf);
+}
+// global 
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+}
+#root {
+    min-height: 100vh;
+    background-color: $Cream;
+}
+.parent-wrap {
+    min-height: 100vh;
+    .child-wrap {
+        min-height: 70vh;
+    }
+}

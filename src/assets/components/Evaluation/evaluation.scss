@@ -1,0 +1,14 @@
+@import './../../paint/paint';
+
+.evaluation {
+    .total-present,
+    .total-past {
+        .total-text {
+            font-family: med;
+            color: $Medium-brown;
+        }
+        h3, h6 {
+            color: $Dark-brown;
+        }
+    }
+}

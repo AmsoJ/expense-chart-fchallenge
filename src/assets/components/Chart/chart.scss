@@ -1,0 +1,26 @@
+@import './../../paint/paint';
+
+.chart {
+    // background-color: black;
+    height: 70%;
+    .bar {
+        width: calc(100% /8);
+        height: 100%;
+        .price {
+            background-color: $Dark-brown;
+        }
+        .bar-main {
+            height: 0%;
+            transition:height .8s;
+            cursor: pointer;
+            background-color: $Soft-red;
+            &:hover {
+                background-color: $Cream;
+            }
+        }
+        .day {
+            font-family: med;
+            color: $Cyan;
+        }
+    }
+}

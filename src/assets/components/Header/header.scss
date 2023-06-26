@@ -1,0 +1,14 @@
+@import './../../paint/paint';
+
+.master {
+    background-color: $Soft-red;
+    .balance {
+        .balance-text {
+            color: $Cream;
+            font-family: med;
+        }
+        .title {
+            color: $Very-pale-orange;
+        }
+    }
+}
