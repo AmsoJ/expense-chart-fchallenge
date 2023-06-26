@@ -1,6 +1,5 @@
 import './chart.scss';
-// import data from './../../../assets/data/data.json';
-import { useEffect } from 'react';
+import data from './../../../assets/data/data.json';
 import { useGlobalContext } from '../../globalHook/globalHook';
 
 // component bar
@@ -15,21 +14,10 @@ function Bar({day, amount, show, handleHover, handleHoverOut}) {
 }
 
 function Chart() {
-    const {information, setInformation, showPrice, hidePrice} = useGlobalContext();
-    // useGlobalEffect(data);
+    const {information, useGlobalEffect, showPrice, hidePrice} = useGlobalContext();
+    useGlobalEffect(data);
 
-    useEffect(()=> {
-        let t = setInterval(() => {
-            setInformation(prevInfo => {
-                return prevInfo.map(dataItem => {
-                    let randomPercentage = Math.random() * 100;
-                    return {...dataItem, amount: randomPercentage}
-                })
-            })
-            // console.log("jose");
-        }, 60000);
-        return () => clearInterval(t);
-    }, [setInformation]);
+    
 
     return <div className="chart d-flex align-items-center justify-content-around">
         {information.map( (information, informationIndex)=> {
