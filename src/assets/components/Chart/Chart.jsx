@@ -17,7 +17,6 @@ function Bar({day, amount, show, handleHover, handleHoverOut, maximus}) {
 function Chart() {
     const {information, useGlobalEffect, showPrice, hidePrice} = useGlobalContext();
     useGlobalEffect(data);
-    console.log("are you joking");
     return <div className="chart d-flex align-items-center justify-content-around">
         {information.map( (information, informationIndex, informationArr)=> {
             let classToShowMaximum = "null";
