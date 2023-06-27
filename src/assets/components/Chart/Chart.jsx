@@ -17,18 +17,18 @@ function Bar({day, amount, show, handleHover, handleHoverOut, maximus}) {
 function Chart() {
     const {information, useGlobalEffect, showPrice, hidePrice} = useGlobalContext();
     useGlobalEffect(data);
-
+    console.log("are you joking");
     return <div className="chart d-flex align-items-center justify-content-around">
         {information.map( (information, informationIndex, informationArr)=> {
-            let classToBeAdded = "null";
+            let classToShowMaximum = "null";
             let maximumPrice = Math.max(...informationArr.map(item => item.amount));
-            information.amount === maximumPrice && (classToBeAdded = "max");
+            information.amount === maximumPrice && (classToShowMaximum = "max");
             return <Bar
                 key={informationIndex}
                 {...information}
                 handleHoverOut = {() => hidePrice()}
                 handleHover = {()=>showPrice(informationIndex)}
-                maximus={classToBeAdded}
+                maximus={classToShowMaximum}
             />
         })}
     </div>
