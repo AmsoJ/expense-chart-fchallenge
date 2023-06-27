@@ -8,7 +8,7 @@ function Bar({day, amount, show, handleHover, handleHoverOut}) {
         {show && <span className="price w-100 badge rounded-pill">
             {amount}
         </span>}
-        <div className="bar-main my-1 rounded-2" style={{height: amount + "%"}} onMouseOver={handleHover} onMouseOut={handleHoverOut}></div>
+        <div className="bar-main my-1 rounded-2" style={{height: amount + "%", transition: ".3s"}} onMouseOver={handleHover} onMouseOut={handleHoverOut}></div>
         <p className="day">{day}</p>
     </div>
 }
@@ -16,8 +16,6 @@ function Bar({day, amount, show, handleHover, handleHoverOut}) {
 function Chart() {
     const {information, useGlobalEffect, showPrice, hidePrice} = useGlobalContext();
     useGlobalEffect(data);
-
-    
 
     return <div className="chart d-flex align-items-center justify-content-around">
         {information.map( (information, informationIndex)=> {

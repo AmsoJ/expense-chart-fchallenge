@@ -2,10 +2,11 @@
 
 .chart {
     // background-color: black;
-    height: 70%;
+    min-height: 70%;
     .bar {
         width: calc(100% /8);
-        height: 100%;
+        height: 200px;
+        // background-color: black;
         .price {
             background-color: $Dark-brown;
         }
@@ -21,6 +22,11 @@
         .day {
             font-family: med;
             color: $Cyan;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .bar {
+            height: 50vh;
         }
     }
 }

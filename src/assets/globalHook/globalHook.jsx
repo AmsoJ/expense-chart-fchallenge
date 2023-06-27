@@ -21,8 +21,6 @@ export const AppProvider = ({children}) => {
             })
         })
     }
-    
-
     const useGlobalEffect = (importedFile) => {
         useEffect(()=>{
             setTimeout(() => {
@@ -31,18 +29,6 @@ export const AppProvider = ({children}) => {
         });
     }
 
-    useEffect(()=> {
-        let t = setInterval(() => {
-            setInformation(prevInfo => {
-                return prevInfo.map(dataItem => {
-                    let randomPercentage = Math.random() * 100;
-                    return {...dataItem, amount: randomPercentage}
-                })
-            })
-            console.log("jose");
-        }, 1000);
-        return () => clearInterval(t);
-    }, [setInformation]);
     return <AppContext.Provider value={{
         information,
         setInformation,
