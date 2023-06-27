@@ -15,6 +15,9 @@
             transition:height .8s;
             cursor: pointer;
             background-color: $Soft-red;
+            &.max {
+                background-color: $Cyan;
+            }
             &:hover {
                 background-color: $Cream;
             }
